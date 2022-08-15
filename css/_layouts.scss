@@ -1,0 +1,24 @@
+$default-padding: 2em 6em;
+$secondary-padding: 2em 4em;
+$xs-padding: 1em 2em;
+$sm-padding: 1em 3em;
+$default-margin: 0 3em;
+$sm-margin: 0 1em;
+
+@mixin devices ($breakpoint) {
+    
+
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 680px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 481px) {
+            @content;
+        }
+    }
+
+
+}

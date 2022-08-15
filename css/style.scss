@@ -1,0 +1,111 @@
+@import './colors';
+@import './layouts';
+
+* {
+    a {
+        color: $link;
+        text-decoration: none;
+    }
+
+    .accordion-button {
+        color: $link!important;
+    }
+
+    nav {
+        padding: $default-margin;
+    }
+
+    @include devices(tablet) {
+        nav {
+            padding: $sm-margin;
+        }
+
+    }
+
+    @include devices(mobile) {
+        
+        nav {
+            padding: $sm-margin;
+        }
+    }
+}
+
+body {
+    background-color: $bg-color;
+}
+
+
+.banner {
+    img {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.home {
+    
+    @include devices(tablet) {
+        padding: $sm-padding;
+
+    }
+
+    @include devices(mobile) {
+        padding: $xs-padding;
+    }
+}
+
+.about {
+    padding: $default-padding;
+
+
+    @include devices(tablet) {
+        padding: $sm-padding;
+    }
+
+    @include devices(mobile) {
+        padding: $xs-padding;
+    }
+}
+
+.blogs {
+    padding: $secondary-padding;
+    @include devices(tablet) {
+        padding: $sm-padding;
+    }
+
+    @include devices(mobile) {
+        padding: $xs-padding;
+    }
+}
+
+.contact {
+    padding: $default-padding;
+    @include devices(tablet) {
+        padding: $sm-padding;
+    }
+
+    @include devices(mobile) {
+        padding: $xs-padding;
+    }
+}
+
+
+
+footer {
+    margin-top: 4em;
+    height: 25vh;
+    text-align: center;
+    padding: 5em 0;
+    background-color: $accent;
+    //background-image: linear-gradient($bg-color, $accent);
+}
+
+
+// remove bootstrap glow
+input[type="text"],
+textarea,
+button {
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+}
